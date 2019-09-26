@@ -1,10 +1,10 @@
 import React from 'react'
 
 export default function MovieCard(props) {
-  console.log(props)
+  
   return (
     <div>
-      {props.data.map((movie, index) => {
+      {props.data && props.data.map((movie, index) => {
         return (
           <div key={index}>
             <h2>{movie.Title}</h2>
