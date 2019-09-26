@@ -1,12 +1,8 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 
-import MovieCard from './MovieCard';
-
-export default function SearchForm() {
+export default function SearchForm({api_call}) {
 
   const [input, setInput] = useState()
-  const [data, setData] = useState()
 
   const handleChange = e => {
     setInput(e.target.value)
@@ -15,14 +11,7 @@ export default function SearchForm() {
 
   const handleSubmit = e => {
     e.preventDefault()
-    axios.get(`http://www.omdbapi.com/?i=tt3896198&apikey=a9758f47&s=${input}`)
-      .then(res => {
-        setData(res.data.Search)
-        console.log(res.data.Search)
-      })
-      .catch(err => {
-        console.log(`*** Error: ${err}`)
-      })
+    api_call(input)
   }
 
   return (
@@ -36,7 +25,6 @@ export default function SearchForm() {
         />
         <button type="submit">Submit</button>
       </form>
-      <MovieCard data={data} />
     </div>
   )
 }
