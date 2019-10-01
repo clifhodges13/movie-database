@@ -11,7 +11,7 @@ export default function App() {
   const [data, setData] = useState()
 
   const api_call = (input, page) => {
-    axios.get(`http://www.omdbapi.com/?i=tt3896198&apikey=a9758f47`,
+    axios.get(`https://www.omdbapi.com/?i=tt3896198&apikey=a9758f47`,
       { params: {
           s: `${input}`,
           page: `${page}`
