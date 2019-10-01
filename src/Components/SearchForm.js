@@ -11,7 +11,7 @@ export default function SearchForm({api_call}) {
 
   const handleSubmit = e => {
     e.preventDefault()
-    api_call(input)
+    api_call(input, 1)
   }
 
   return (

@@ -18,7 +18,8 @@ export default function Search({api_call}) {
         width: 300px;
         height: 20px;
         margin-right: 15px;
-        border: 1px solid turquoise;
+        border: 1px solid black;
+        padding-left: 2%;
         border-radius: 5px;
       }
       & button {
@@ -39,6 +40,7 @@ export default function Search({api_call}) {
 
   return (
     <StyledSearch>
+      <h1 style={{marginRight: '15px'}}><i class="fas fa-film"></i></h1>
       <SearchForm api_call={api_call} />
     </StyledSearch>
   )
