@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import axios from 'axios'
 import { Route } from 'react-router-dom'
 import Search from './Components/Search'
@@ -26,9 +26,9 @@ export default function App() {
       })
   }
 
-  useEffect(() => {
-    api_call('back', 1)
-  }, [])
+  // useEffect(() => {
+  //   api_call('back', 1)
+  // }, [])
   
   return (
     <div className="App">
